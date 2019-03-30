@@ -2,19 +2,44 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Devise Pundit" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise Pundit" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <title><%= content_for?(:title) ? yield(:title) : "Oneview" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Oneview" %>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+
+    <%= javascript_include_tag 'application' , params[:controller] %>
     <%= csrf_meta_tags %>
+     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'html5shiv' %>
+      <%= javascript_include_tag 'respond.min' %>
+    <![endif]-->
+
   </head>
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
+    <main role="main" class="container">
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+		
+	<%= debug(params) if Rails.env.development? %>
+		
+
   </body>
+	
+		<!-- For fading the ticker messages -->   
+    <script async="async" type="text/javascript"> 
+	    $(function() {
+	   $('.alert').delay(1000).fadeIn('normal', function() {
+	      $(this).delay(3500).fadeOut();
+	   });
+	});
+	</script>
+
 </html>

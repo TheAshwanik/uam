@@ -10,6 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require flatpickr
+ *= require custom
+ *= require_tree ./devise
  *= require_tree .
  *= require_self
  */
+
+@import "material";

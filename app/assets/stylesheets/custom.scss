@@ -1,0 +1,142 @@
+body{
+    //background-color: #9c27b0;
+    background-image: url(/assets/background.png);
+    //background: #141E30;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+body.application_dashboard_metrics.show{
+	color: white;
+}
+
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  margin-top: 65px; // accommodate the navbar
+}
+
+
+.nopadding{
+    padding: 0px;
+}
+
+
+.col.servicecols {
+    padding: 0px;
+}
+
+.servicecols.col-12 {
+    padding: 0px;
+}
+
+.col.appcols {
+    padding: 0px;
+}
+
+.appcols.col-12 {
+    padding: 0px;
+}
+
+.appCardHeaders > h5 > button.btn.btn-link{
+	color: white;
+}
+
+.servicecards > .serviceCardHeaders {
+    //background-color: lightgreen;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.12);
+}
+
+.appcards > .appCardHeaders {
+    //background-color: lightgreen;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.12);
+    //margin-bottom: 0;
+    //padding: 1rem 1rem;
+}
+
+.white-btn-link{
+	color: white;
+}
+
+
+.serviceCardHeaders > h4 >button.btn.btn-link{
+	color: #40ffefba; 
+}
+
+#mmenu_screen > .row {
+    min-height: 100vh;
+}
+
+.flex-fill {
+    flex:1 1 auto;
+}
+
+.col-12 {
+  //flex-basis: auto;
+}
+
+.form-white-background {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.12);
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.form-white-background label {
+    color:black;
+}
+
+
+$visitedWhiteColor: white;
+$visitedLinkInsideTableColor: #ff4081;
+
+a:visited{
+  color: $visitedWhiteColor;
+}
+
+td > a:visited{
+  color: $visitedLinkInsideTableColor;
+}
+
+a.btn.btn-success:visited{
+  color: $visitedWhiteColor;
+}
+
+a.btn.btn-danger:visited{
+  color: $visitedWhiteColor;
+}
+
+//colors
+$grey: #cacaca;
+
+// search input
+#accordion_search_bar_container {
+  position: relative;
+  &:after {
+    content: '\e003';
+    font-family: Glyphicons Halflings;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #accordion_search_bar {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid $grey;
+    border-radius: 25px;
+    outline: 0;
+  }
+}
+
+// make all the line clickable
+.panel-title {
+  a {
+    display: block;
+  }
+}
+
