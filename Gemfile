@@ -41,7 +41,7 @@ group :development do
   gem 'rails_layout'
 end
 
-gem 'bootstrap',     '4.1.1'
+gem 'bootstrap',     '4.3.1'
 gem 'material-sass', '4.1.1'
 gem 'material_icons'
 gem 'rack-cors'
