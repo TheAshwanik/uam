@@ -1,29 +1,47 @@
 <div class="authform">
-  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
-    <h3>Sign in</h3>
-		<%= render "devise/shared/error_messages", resource: resource %>
-    <div class="form-group">
-      <%- if devise_mapping.registerable? %>
-        <%= link_to 'Sign up', new_registration_path(resource_name), class: 'right'  %>
-      <% end -%>
-      <%= f.label :email %>
-      <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%- if devise_mapping.recoverable? %>
-        <%= link_to "Forgot password?", new_password_path(resource_name), class: 'right' %>
-      <% end -%>
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-    </div>
-      <%= f.submit 'Sign in', :class => 'btn btn-primary right' %>
-			<br/>
-      <% if devise_mapping.rememberable? -%>
-        <div class="checkbox" style="width:150px">
-          <label>
-            <%= f.check_box :remember_me %> Remember me
-          </label>
+	<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+						  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form', :class => 'form-signin'}) do |f| %>
+
+              <div class="form-label-group">
+								<%= f.label :email ,for: "user_email"%>
+					      <%= f.email_field :email, class: 'form-control', placeholder: "Email address" %>
+
+              </div>
+
+              <div class="form-label-group">
+						      <%= f.label :password ,  for: "user_password" %>
+      						<%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+								  <%- if devise_mapping.recoverable? %>
+								        <%= link_to "Forgot password?", new_password_path(resource_name), class: 'right' %>
+   							  <% end %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
+							<div class="custom-control custom-checkbox mb-3">
+								<label class="custom-control-label">
+      				      <%= f.check_box :remember_me ,class: "custom-control-input"%> Remember me
+			          </label>
+
+              </div>
+							<% end %>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+
+              <!-- <hr class="my-4">
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+							-->
+
+						<% end %>
+          </div>
         </div>
-      <% end -%>
-  <% end %>
+      </div>
+    </div>
+
 </div>

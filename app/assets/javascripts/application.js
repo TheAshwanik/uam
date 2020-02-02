@@ -15,7 +15,6 @@
 //= require rails-ujs
 //= require bootstrap
 //= require bootstrap-sprockets
-//= require material
 //= require flatpickr
 //= require idle
 //= require_tree ./custom

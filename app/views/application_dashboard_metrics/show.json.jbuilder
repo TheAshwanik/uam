@@ -1,1 +1,0 @@
-json.partial! "application_dashboard_metrics/application_dashboard_metric", application_dashboard_metric: @application_dashboard_metric

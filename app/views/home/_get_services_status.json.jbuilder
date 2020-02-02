@@ -1,1 +1,0 @@
-json.status Service.get_service_healthstatus
