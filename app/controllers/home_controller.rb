@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!
   def index
-		@services = Service.all
+		#@services = Service.all
   end
 
   def get_application_status

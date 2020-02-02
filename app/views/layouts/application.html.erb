@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Oneview" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Oneview" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "UAM - User Access Management" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "UAM - User Access Management" %>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
 
-    <%= javascript_include_tag 'application' , params[:controller] %>
+    <%= javascript_include_tag 'application' , params[:controller] , 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

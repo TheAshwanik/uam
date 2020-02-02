@@ -44,6 +44,8 @@ end
 gem 'bootstrap',     '4.3.1'
 gem 'material-sass', '4.1.1'
 gem 'material_icons'
+gem 'mysql2'
 gem 'rack-cors'
 gem 'mini_racer'
 gem 'flatpickr_rails'
+gem "font-awesome-rails"

@@ -1,25 +1,41 @@
-# SQLite version 3.x
-#   gem install sqlite3
+# 
+# Install the MYSQL driver
+#   gem install mysql2
 #
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
 #
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  database: UAM_DB
+  username: oneviewlatest
+  password: 172-31-21-46-One-viewlatest
+  socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  database: oneviewlatest_development
+  username: oneviewlatest
+  password: 172-31-21-46-One-viewlatest
+  socket: /var/lib/mysql/mysql.sock
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  database: oneviewlatest_development
+  username: oneviewlatest
+  password: 172-31-21-46-One-viewlatest
+  socket: /var/lib/mysql/mysql.sock

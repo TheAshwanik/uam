@@ -1,3 +1,0 @@
-<% application.application_dashboard_metrics.uniq{|p|p.metric_name}.each do |metric| %>
- <%= link_to metric.metric_name, application_dashboard_metrics_path(appid:metric.application_id,metric_name: metric.metric_name), {:id=>"app_metrics_#{metric.application_id}" , :class=>"btn #{metric.isFailed(metric.metric_name)? 'btn-danger':'btn-success' }",:role=>"button"} %>
-<% end %>
