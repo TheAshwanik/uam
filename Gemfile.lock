@@ -171,7 +171,9 @@ GEM
     material_icons (2.2.1)
       railties (>= 3.2)
     method_source (1.0.0)
-    mimemagic (0.3.4)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     mini_racer (0.2.9)
@@ -190,7 +192,8 @@ GEM
     orm_adapter (0.5.0)
     popper_js (1.16.0)
     public_suffix (4.0.3)
-    puma (3.12.6)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     rack (2.2.3)
@@ -321,7 +324,7 @@ DEPENDENCIES
   material_icons
   mini_racer
   mysql2
-  puma (~> 3.12)
+  puma (~> 4.3)
   pundit
   rack-cors
   rails (~> 5.2)
